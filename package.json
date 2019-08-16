@@ -36,6 +36,7 @@
     "react-hot-loader": "^4.12.11",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
+    "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.8.0",

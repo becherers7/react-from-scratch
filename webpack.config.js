@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'development',
@@ -36,6 +37,9 @@ module.exports = {
        template: 'src/public/index.html',
        // title: 'Output Management'
      }),
+
+     // optimization analyzer
+     new BundleAnalyzerPlugin(),
 
      // following two are for hot replacement over node server.
      new webpack.HotModuleReplacementPlugin,
