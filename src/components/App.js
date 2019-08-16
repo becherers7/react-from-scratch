@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import '../public/style.css';
 import Quark from '../public/quark.png';
@@ -13,4 +14,4 @@ const App = () => (
   </div>
 )
 
-export default App;
+export default hot(App);

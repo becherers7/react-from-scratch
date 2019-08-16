@@ -7,8 +7,8 @@ const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&t
 module.exports = {
   mode: 'development',
   entry: {
-    print: ['./src/print.js', hotMiddlewareScript],
-    app: ['./src/index.js', hotMiddlewareScript],
+    print: [ './src/print.js', hotMiddlewareScript],
+    app: [ 'react-hot-loader/patch', './src/index.js' ],
   },
   // use source maps, source maps compiled code back into it's original source code to increase debugging.
   devtool: 'inline-source-map',
