@@ -6,6 +6,11 @@ const hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&t
 
 module.exports = {
   mode: 'development',
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   entry: {
     print: [ './src/print.js', hotMiddlewareScript],
     app: [ 'react-hot-loader/patch', './src/index.js' ],
