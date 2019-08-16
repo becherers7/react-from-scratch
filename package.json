@@ -1,6 +1,9 @@
 {
   "name": "react-from-scratch",
   "version": "1.0.0",
+  "sideEffects": [
+    "./src/utils/utils.js"
+  ],
   "description": "",
   "private": true,
   "scripts": {
