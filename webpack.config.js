@@ -10,33 +10,33 @@ module.exports = {
     print: ['./src/print.js', hotMiddlewareScript],
     app: ['./src/index.js', hotMiddlewareScript],
   },
-  //use source maps, maps compiled code back into it's original source code.
+  // use source maps, source maps compiled code back into it's original source code to increase debugging.
   devtool: 'inline-source-map',
-  //This tells webpack-dev-server to serve the files from the dist directory on localhost:8080
+  // This tells webpack-dev-server to serve the files from the dist directory on localhost:8080
   devServer: {
     contentBase: './dist'
   },
   plugins: [
-    //clean the dist folder after each time we run.
+     // clean the dist folder after each time we run.
      new CleanWebpackPlugin(),
-     //creates an index.html file for us in dist. this way if we rename an entry it will rename it for us
+     // creates an index.html file for us in dist. this way if we rename an entry it will rename it for us
      new HtmlWebpackPlugin({
        template: 'src/public/index.html',
        // title: 'Output Management'
      }),
-     //following two are for hot replacement over node server.
+     // following two are for hot replacement over node server.
      new webpack.HotModuleReplacementPlugin,
      new webpack.NoEmitOnErrorsPlugin()
   ],
   output: {
-    //dynamically create bundle file names from webpack.
+    // dynamically create bundle file names from webpack.
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   module: {
      rules: [
-       //handle jsx and js compilation
+       // handle jsx and js compilation
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -59,7 +59,7 @@ module.exports = {
            'file-loader'
          ]
         },
-       //handle font loading
+       //h andle font loading
         {
          test: /\.(woff|woff2|eot|ttf|otf)$/,
          use: [
