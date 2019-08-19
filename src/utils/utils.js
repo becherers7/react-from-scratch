@@ -5,7 +5,6 @@ export const addToArray = function(element, array) {
     return array;
 }
 
-
 export const removeFromArray = function(element, array) {
     const position = array[element];
     array.splice(position, 1);
